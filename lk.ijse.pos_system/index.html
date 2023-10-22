@@ -152,12 +152,12 @@
                         <input type="text" class="form-control" id="itemName">
                     </div>
                     <div class="mb-3">
-                        <label for="itemPrice" class="form-label">Item Price</label>
-                        <input type="text" class="form-control" id="itemPrice">
-                    </div>
-                    <div class="mb-3">
                         <label for="itemQty" class="form-label">Item Qty</label>
                         <input type="tel" class="form-control" id="itemQty">
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemPrice" class="form-label">Item Price</label>
+                        <input type="text" class="form-control" id="itemPrice">
                     </div>
                     <div id="itemButton" class="mt-3">
                         <button type="button" class="btn btn-success">Submit</button>
@@ -167,7 +167,6 @@
                 </form>
             </div>
         </div>
-        <hr>
     </section>
 
     <section>
@@ -183,7 +182,7 @@
                 <th scope="col">Price</th>
             </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id="item_table_body"></tbody>
         </table>
     </section>
 </main>
@@ -344,6 +343,7 @@
 
 <!--link Controllers-->
 <script type="module" src="controller/CustomerController.js"></script>
+<script type="module" src="controller/ItemController.js"></script>
 
 </body>
 </html>
