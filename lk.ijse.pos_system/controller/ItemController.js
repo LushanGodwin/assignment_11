@@ -1,5 +1,6 @@
 import {ItemModel} from "../model/ItemModel.js";
 import {customer_db, item_db} from "../db/db.js";
+import {setItemIds} from "./OrderController.js";
 
 var row_index = null;
 $("#itemButton>button[type='button']").eq(0).on("click", () =>{
@@ -13,6 +14,7 @@ $("#itemButton>button[type='button']").eq(0).on("click", () =>{
    item_db.push(item_obj);
 
     loadStudentData();
+   setItemIds();
 
    clear();
 
@@ -25,7 +27,7 @@ const clear = () =>{
    $("#itemPrice").val("");
 
 }
-const loadStudentData = () =>{
+export const loadStudentData = () =>{
    $('#item_table_body').empty();
    item_db.map((item, ) =>{
       let record = `<tr><td class="item_code">${item.item_code}</td><td class="item_description">${item.item_description}</td>
@@ -60,6 +62,7 @@ $("#itemButton>button[type='button']").eq(2).on("click", () => {
    item_db.splice(index,1);
 
    loadStudentData();
+   setItemIds();
 
    clear();
 
