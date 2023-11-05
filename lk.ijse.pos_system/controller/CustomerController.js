@@ -1,5 +1,6 @@
 import {CustomerModel} from "../model/CustomerModel.js";
 import {customer_db} from "../db/db.js";
+import {setCustomerIds} from "./OrderController.js";
 
 
 var row_index = null;
@@ -30,6 +31,7 @@ $("#customerButton>button[type='button']").eq(0).on("click", () =>{
     customer_db.push(customer_obj);
 
     loadStudentData();
+    setCustomerIds();
 
     clear();
 
@@ -62,6 +64,7 @@ $("#customerButton>button[type='button']").eq(2).on("click", () =>{
     customer_db.splice(index, 1);
 
     loadStudentData();
+    setCustomerIds();
 
     clear();
 })
